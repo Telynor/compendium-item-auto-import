@@ -1,0 +1,20 @@
+{
+  "id": "compendium-item-auto-import",
+  "title": "Compendium Item Auto Import",
+  "description": "Automatically import Item compendium entries into an Items sidebar folder.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "Telynor"
+    }
+  ],
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "manifest": "https://raw.githubusercontent.com/Telynor/compendium-item-auto-import/main/module.json",
+  "download": "https://raw.githubusercontent.com/Telynor/compendium-item-auto-import/main/compendium-item-auto-import.zip"
+}
