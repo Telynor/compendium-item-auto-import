@@ -1,0 +1,29 @@
+<section class="standard-form" style="padding: 1rem;">
+  <div class="form-group">
+    <label for="compendium-import-source">Source compendium</label>
+    <div class="form-fields">
+      <select id="compendium-import-source" name="sourcePack">
+        {{#each packs}}
+          <option value="{{id}}" {{#if selected}}selected{{/if}}>{{label}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="compendium-import-folder">Destination <span data-folder-type>{{folderType}}</span> folder</label>
+    <div class="form-fields">
+      <select id="compendium-import-folder" name="targetFolder">
+        {{#each folders}}
+          <option value="{{id}}" {{#if selected}}selected{{/if}}>{{label}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+  {{#unless hasPacks}}<p>No Item or Actor compendiums are available in this world.</p>{{/unless}}
+  {{#unless hasFolders}}<p>Create a matching folder in the Items or Actors sidebar first.</p>{{/unless}}
+  <footer class="form-footer">
+    <button type="button" data-action="import" {{#unless hasFolders}}disabled{{/unless}} {{#unless hasPacks}}disabled{{/unless}}>
+      <i class="fa-solid fa-file-import"></i> Import
+    </button>
+  </footer>
+</section>
